@@ -20,24 +20,30 @@ None
 
 ## Usage
 
-for running it locally:
+Clone this repository.
+
+Navigate to the project directory.
+
+Then you can use one of the following commands:
+
+- for running it locally:
 ```
 python csv-to-rest.py
 ```
 
-for running it as a container locally:
+- for running it as a container locally:
 ```
 docker-compose -f "docker-compose.yml" up -d --build 
 ```
 
-One of the routes you can use is:
+One of the routes you can call is:
 
 http://localhost:8983/get/[field]/[value]
 
 
 So for example, you can send a request to the route http://localhost:8983/get/family/Pinaceae .
 
-The values are located in the data folder.
+The dump and his values are located in the data folder.
 
 ## Dependencies
 
