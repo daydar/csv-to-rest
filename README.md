@@ -2,7 +2,9 @@
 
 Expose data from a CSV file via a REST server.
 
-This fork implements a dockerized environment.
+This fork implements a dockerized development environment.
+
+:warning: **No implementation for production**
 
 ## Original Author
 
@@ -23,17 +25,17 @@ for running it locally:
 python csv-to-rest.py
 ```
 
-for running it as a container:
+for running it as a container locally:
 ```
 docker-compose -f "docker-compose.yml" up -d --build 
 ```
 
 One of the routes you can use is:
 
-http://0.0.0.0:8983/get/[field]/[value]
+http://localhost:8983/get/[field]/[value]
 
 
-So for example, yo can send a request to the route http://0.0.0.0:8983/get/family/Pinaceae .
+So for example, you can send a request to the route http://localhost:8983/get/family/Pinaceae .
 
 The values are located in the data folder.
 
