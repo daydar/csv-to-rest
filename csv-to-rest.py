@@ -14,6 +14,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 LINE_RETURN_COUNT_MAX = 100 # How many records to return in a dump
 CSVPATH_DEFAULT = './data/'
 # CSVFILENAME_DEFAULT = 'IME-US-list.csv'
+CSVFILENAME_DEFAULT = 'species_slim.csv'
 PORT_DEFAULT = 8983
 
 # Globals
@@ -29,7 +30,7 @@ _filelist = []
 # Fetch arguments
 parser = argparse.ArgumentParser(description='Expose CSV via REST')
 parser.add_argument('-d', '--datapath', type=str, nargs='?', default=CSVPATH_DEFAULT)
-parser.add_argument('-f', '--filename', type=str, nargs='?', default=None)
+parser.add_argument('-f', '--filename', type=str, nargs='?', default=CSVFILENAME_DEFAULT)
 parser.add_argument('-t', '--template', type=str, nargs='?', default=None)
 parser.add_argument('-p', '--port', type=int, nargs='?', default=PORT_DEFAULT)
 parser.add_argument('-v', '--verbose', help='Verbose output', action='store_true')
@@ -242,7 +243,7 @@ def read_file(fname):
   csvcontents = []
   csvdict = {}
   with open(os.sep.join([csvpath, csvfilename]), 'r') as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',', quotechar='"')
+    csvreader = csv.reader(csvfile, delimiter=';', quotechar='"')
     csvfields = next(csvreader) # Read in the field names
     # logging.debug("csvfields: %s" % (csvfields))
     if (critmaj): # Only capture the severityPos if critmaj is set

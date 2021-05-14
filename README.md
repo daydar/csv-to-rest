@@ -1,14 +1,16 @@
-[![Maintainability](https://api.codeclimate.com/v1/badges/1214557d66fc63353b77/maintainability)](https://codeclimate.com/github/jolewis-ddn/csv-to-rest/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/1214557d66fc63353b77/test_coverage)](https://codeclimate.com/github/jolewis-ddn/csv-to-rest/test_coverage)
-
 # csv-to-rest
 
-Expose data from a CSV file via a REST server
+Expose data from a CSV file via a REST server.
 
-## Author
+This fork implements a dockerized environment.
+
+## Original Author
 
 John D. Lewis <jolewis@ddn.com>
+
+## Author from Fork
+
+Deniz Aydar <deniz.aydar@gmx.de>
 
 ## Installation
 
@@ -30,6 +32,8 @@ Bottle framework
 
 2019-01-30: Created
 
+2021-05-14: Forked
+
 ## Credits
 
 None
@@ -39,6 +43,7 @@ None
 ### MIT License (MIT) ###
 
 Copyright &copy; 2019 John D. Lewis
+Copyright &copy; 2021 Deniz Aydar
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
